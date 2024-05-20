@@ -1,0 +1,12 @@
+{
+  "name": "@gradio_agent_cookbook/package",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app_api.js",
+  "scripts": {
+    "start": "node app_api.js"
+  },
+  "dependencies": {
+    "@gradio/client": "^0.19.3"
+  }
+}

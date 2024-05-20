@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index_hellp_js_Page</title>
+</head>
+<body>
+    <input id="nameInput" type="text" placeholder="Enter test name ">
+    <button id="greetButton">Greet</button>
+    <input id="output" type="text" readonly>
+    <script>
+        // Define the greet function
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+
+        // Add an event listener to the button
+        document.getElementById('greetButton').addEventListener('click', function() {
+            // Get the value from the input box
+            var name = document.getElementById('nameInput').value;
+
+            // Call the greet function
+            var greeting = greet(name);
+
+            // Display the result in the output box
+            document.getElementById('output').value = greeting;
+        });
+    </script>
+</body>
+</html>

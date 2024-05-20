@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Greeting Page</title>
+</head>
+<body>
+    <input id="nameInput" type="text" placeholder="Enter your name">
+    <button id="greetButton">Greet</button>
+    <input id="output" type="text" readonly>
+    <script type="module">
+        import { greet } from "/static/app_api.js";
+
+        document.getElementById('greetButton').addEventListener('click', async function() {
+            var name = document.getElementById('nameInput').value;
+            var greeting = await greet(name);
+            document.getElementById('output').value = greeting;
+        });
+    </script>
+</body>
+</html>

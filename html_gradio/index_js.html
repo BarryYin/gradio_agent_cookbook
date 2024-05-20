@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+</head>
+<body>
+    <h1>Welcome to My Web Page</h1>
+
+    <button onclick="predict()">Predict</button>
+    <p id="result"></p>
+
+    <script
+        type="module"
+        src="https://gradio.s3-us-west-2.amazonaws.com/4.31.4/gradio.js"
+    ></script>
+    <gradio-app src="http://localhost:7860/"></gradio-app>
+    
+</body>
+</html>

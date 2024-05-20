@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gradio Greeting Page</title>
+</head>
+<body>
+    <input id="nameInput" type="text" placeholder="input any words">
+    <button id="greetButton">Greet</button>
+    <input id="output" type="text" readonly>
+    <script>
+        document.getElementById('greetButton').addEventListener('click', function() {
+            var name = document.getElementById('nameInput').value;
+            fetch('/greet/' + name)
+                .then(response => response.json())
+                .then(data => document.getElementById('output').value = data.greeting);
+        });
+    </script>
+</body>
+</html>
